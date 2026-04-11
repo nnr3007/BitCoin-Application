@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitDash | Your Bitcoin Hub</title>
+    <link rel="icon" type="image/x-icon" href="/ni/images.jpeg">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+</head>
+<body>
+   <nav>
+      <div>
+        <div>
+          <img src="/ni/bitcoin-technology-concept-with-circuit-diagram_1419-2255.avif" alt="bitcoin logo" style="width: 100px;">
+          <div class="logo">BitDash</div>
+        </div>
+      </div>
+        <ul class="nav-links">
+            <li><a href="http://127.0.0.1:5501/ni/Index.html" onclick="showPage('home')">Home</a></li>
+            <li><a href="http://127.0.0.1:5501/FWA/crypto-app/dashboard.html" onclick="showPage('Portfolio')">Portfolio</a></li>
+            <li><a href="http://127.0.0.1:5501/FWA/crypto-app/tools.html" onclick="showPage('features')">Features</a></li>
+            <li><a href="http://127.0.0.1:5501/ni/Wallet.html" onclick="showPage('wallet')">Wallet</a></li>
+            <li><a href="http://127.0.0.1:5501/range.html" onclick="showPage('range')">Range</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-login" onclick="showPage('login')">Login</button>
+        </div>
+    </nav>
+<div class="tlt-cont">
+    <!-- Moving Price Ticker -->
+    <div class="ticker-wrap glass-card">
+        <div id="priceTicker" class="ticker">
+            <!-- Injected via script.js -->
+            Loading market prices...
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Technical Charts Section -->
+        <div class="analytics-row">
+            <div class="glass-card chart-hero">
+                <h3>Technical Analysis (BTC/USD)</h3>
+                <div id="tradingview_btc" class="tv-widget"></div>
+            </div>
+            <div class="stats-panel">
+                <div class="glass-card gainer-loser-card">
+                    <h3>Top Gainers 📈</h3>
+                    <ul id="topGainers" class="market-list"></ul>
+                </div>
+                <div class="glass-card gainer-loser-card">
+                    <h3>Top Losers 📉</h3>
+                    <ul id="topLosers" class="market-list"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Price Prediction Section -->
+        <div class="analytics-row" style="margin-top: 2rem;">
+            <div class="glass-card ai-prediction-card">
+                <h3>AI Price Prediction (Next 24 Hours)</h3>
+                <div id="aiPredictionContainer" class="ai-prediction-grid">
+                    <!-- Injected via ai_signals.js -->
+                    <p>Calculating predictions based on 7-day trend...</p>
+                </div>
+            </div>
+            
+            <div class="glass-card signals-card">
+                <h3>Real-Time Trading Signals</h3>
+                <div id="tradingSignalsContainer" class="signals-list">
+                    <!-- Injected via ai_signals.js -->
+                    <p>Analyzing market momentum...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Heatmap Section -->
+        <div class="glass-card heatmap-card">
+            <div class="header-flex">
+                <h3>Market Heatmap (Top 20 by Market Cap)</h3>
+                <span class="refresh-indicator">Size = Market Cap | Color = 24h Change</span>
+            </div>
+            <div id="marketHeatmap" class="heatmap-grid">
+                <!-- Injected via analytics.js -->
+                <p>Generating heatmap...</p>
+            </div>
+        </div>
+
+        <!-- Top 100 Market Table -->
+        <div class="glass-card table-card">
+            <div class="header-flex">
+                <h3>Top 100 Cryptocurrencies</h3>
+                <div class="controls-group">
+                    <input type="text" id="searchInput" placeholder="Search by name or symbol...">
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table id="marketTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable('market_cap_rank')">#</th>
+                            <th>Name</th>
+                            <th onclick="sortTable('current_price')">Price</th>
+                            <th onclick="sortTable('price_change_percentage_24h')">24h %</th>
+                            <th onclick="sortTable('market_cap')">Market Cap</th>
+                            <th onclick="sortTable('total_volume')">Volume</th>
+                        </tr>
+                    </thead>
+                    <tbody id="marketTableBody">
+                        <!-- Injected via script.js -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="loadingIndicator" class="loading-overlay" style="display: none;">
+                <p>Updating market data...</p>
+            </div>
+        </div>
+    </main>
+</div>
+    <!-- Moving Price Ticker -->
+    <div class="ticker-wrap glass-card">
+        <div id="priceTicker" class="ticker">
+            <!-- Injected via script.js -->
+            Loading market prices...
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Technical Charts Section -->
+        <div class="analytics-row">
+            <div class="glass-card chart-hero">
+                <h3>Technical Analysis (BTC/USD)</h3>
+                <div id="tradingview_btc" class="tv-widget"></div>
+            </div>
+            <div class="stats-panel">
+                <div class="glass-card gainer-loser-card">
+                    <h3>Top Gainers 📈</h3>
+                    <ul id="topGainers" class="market-list"></ul>
+                </div>
+                <div class="glass-card gainer-loser-card">
+                    <h3>Top Losers 📉</h3>
+                    <ul id="topLosers" class="market-list"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Price Prediction Section -->
+        <div class="analytics-row" style="margin-top: 2rem;">
+            <div class="glass-card ai-prediction-card">
+                <h3>AI Price Prediction (Next 24 Hours)</h3>
+                <div id="aiPredictionContainer" class="ai-prediction-grid">
+                    <!-- Injected via ai_signals.js -->
+                    <p>Calculating predictions based on 7-day trend...</p>
+                </div>
+            </div>
+            
+            <div class="glass-card signals-card">
+                <h3>Real-Time Trading Signals</h3>
+                <div id="tradingSignalsContainer" class="signals-list">
+                    <!-- Injected via ai_signals.js -->
+                    <p>Analyzing market momentum...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Heatmap Section -->
+        <div class="glass-card heatmap-card">
+            <div class="header-flex">
+                <h3>Market Heatmap (Top 20 by Market Cap)</h3>
+                <span class="refresh-indicator">Size = Market Cap | Color = 24h Change</span>
+            </div>
+            <div id="marketHeatmap" class="heatmap-grid">
+                <!-- Injected via analytics.js -->
+                <p>Generating heatmap...</p>
+            </div>
+        </div>
+
+        <!-- Top 100 Market Table -->
+        <div class="glass-card table-card">
+            <div class="header-flex">
+                <h3>Top 100 Cryptocurrencies</h3>
+                <div class="controls-group">
+                    <input type="text" id="searchInput" placeholder="Search by name or symbol...">
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table id="marketTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable('market_cap_rank')">#</th>
+                            <th>Name</th>
+                            <th onclick="sortTable('current_price')">Price</th>
+                            <th onclick="sortTable('price_change_percentage_24h')">24h %</th>
+                            <th onclick="sortTable('market_cap')">Market Cap</th>
+                            <th onclick="sortTable('total_volume')">Volume</th>
+                        </tr>
+                    </thead>
+                    <tbody id="marketTableBody">
+                        <!-- Injected via script.js -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="loadingIndicator" class="loading-overlay" style="display: none;">
+                <p>Updating market data...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- <script src="js/script.js"></script>
+    <script src="js/trading.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/ai_signals.js"></script> -->
+</body>
+</html>

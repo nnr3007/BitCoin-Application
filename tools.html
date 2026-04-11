@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitDash | Your Bitcoin Hub</title>
+    <link rel="icon" type="image/x-icon" href="/ni/images.jpeg">
+    <meta name="description" content="Use our powerful crypto tools for currency conversion, profit calculation, and live price charts.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+   <nav>
+      <div>
+        <div>
+          <img src="/ni/bitcoin-technology-concept-with-circuit-diagram_1419-2255.avif" alt="bitcoin logo" style="width: 100px;">
+          <div class="logo">BitDash</div>
+        </div>
+      </div>
+        <ul class="nav-links">
+            <li><a href="http://127.0.0.1:5501/ni/Index.html" onclick="showPage('home')">Home</a></li>
+            <li><a href="http://127.0.0.1:5501/FWA/crypto-app/dashboard.html" onclick="showPage('Portfolio')">Portfolio</a></li>
+            <li><a href="http://127.0.0.1:5501/FWA/crypto-app/tools.html" onclick="showPage('features')">Features</a></li>
+            <li><a href="http://127.0.0.1:5501/ni/Wallet.html" onclick="showPage('wallet')">Wallet</a></li>
+            <li><a href="http://127.0.0.1:5501/range.html/range.html" onclick="showPage('range')">Range</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-login" onclick="showPage('login')">Login</button>
+        </div>
+    </nav>
+
+    <main class="tools-container">
+        <div class="tools-grid">
+            <!-- Tool 1: Currency Converter -->
+            <div class="glass-card tool-card">
+                <h3>Currency Converter (USD &rarr; INR)</h3>
+                <div class="input-group">
+                    <label>USD Amount</label>
+                    <input type="number" id="usdAmount" placeholder="Enter USD amount" min="0">
+                </div>
+                <button onclick="convertCurrency()" class="btn btn-primary">Convert</button>
+                <div class="tool-result">
+                    <span>INR Value:</span>
+                    <strong id="inrResult">₹ 0.00</strong>
+                </div>
+            </div>
+
+            <!-- Tool 2: Crypto to INR Converter -->
+            <div class="glass-card tool-card">
+                <h3>Crypto to INR Converter</h3>
+                <div class="input-group">
+                    <label>Select Crypto</label>
+                    <select id="cryptoSelect" class="sort-select" style="width: 100%;">
+                        <option value="bitcoin">Bitcoin (BTC)</option>
+                        <option value="ethereum">Ethereum (ETH)</option>
+                        <option value="solana">Solana (SOL)</option>
+                        <option value="binancecoin">BNB</option>
+                        <option value="ripple">XRP</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Amount</label>
+                    <input type="number" id="cryptoAmount" placeholder="Amount" min="0" step="any">
+                </div>
+                <button onclick="convertCrypto()" class="btn btn-primary">Convert to INR</button>
+                <div class="tool-result">
+                    <strong id="cryptoToInrResult">₹ 0.00</strong>
+                </div>
+            </div>
+
+            <!-- Tool 3: Bitcoin Calculator -->
+            <div class="glass-card tool-card">
+                <h3>Bitcoin Calculator</h3>
+                <div class="input-group">
+                    <label>BTC Amount</label>
+                    <input type="number" id="btcCalcAmount" placeholder="e.g. 0.5" step="any">
+                </div>
+                <button onclick="calculateBTC()" class="btn btn-primary">Calculate Value</button>
+                <div class="tool-result">
+                    <div class="stat-item">
+                        <span>Value in USD:</span>
+                        <strong id="btcUsdResult">$0.00</strong>
+                    </div>
+                    <div class="stat-item">
+                        <span>Value in INR:</span>
+                        <strong id="btcInrResult">₹ 0.00</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tool 4: Profit / Loss Calculator -->
+            <div class="glass-card tool-card">
+                <h3>Profit / Loss Calculator</h3>
+                <div class="input-group">
+                    <label>Buy Price ($)</label>
+                    <input type="number" id="buyPrice" placeholder="Enter buy price">
+                </div>
+                <div class="input-group">
+                    <label>Sell Price ($)</label>
+                    <input type="number" id="sellPrice" placeholder="Enter sell price">
+                </div>
+                <div class="input-group">
+                    <label>Quantity</label>
+                    <input type="number" id="quantity" placeholder="Quantity" value="1">
+                </div>
+                <button onclick="calculateProfit()" class="btn btn-primary">Calculate Profit/Loss</button>
+                <div class="tool-result">
+                    <strong id="profitResult">$ 0.00</strong>
+                </div>
+            </div>
+
+            <!-- Tool 5: Live Crypto Price Chart -->
+            <div class="glass-card tool-card chart-card">
+                <h3>Live Crypto Price Chart (Bitcoin)</h3>
+                <div class="chart-container">
+                    <canvas id="priceChart"></canvas>
+                </div>
+                <div class="refresh-indicator">
+                    Updates every 30s | Powered by CoinGecko
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- <script src="js/script.js"></script> -->
+</body>
+</html>

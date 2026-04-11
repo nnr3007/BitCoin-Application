@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitDash | Your Bitcoin Hub</title>
+    <link rel="icon" type="image/x-icon" href="/ni/images.jpeg">
+    <link rel="stylesheet" href="range.css">
+</head>
+<body>
+    <nav>
+         <div>
+        <div>
+          <img src="/ni/bitcoin-technology-concept-with-circuit-diagram_1419-2255.avif" alt="bitcoin logo" style="width: 100px;margin-left: 40px;">
+          <div class="logo" style="margin-left: -10px;">BitDash</div>
+        </div>
+      </div>
+        <ul class="nav-links">
+            <li><a href="http://127.0.0.1:5501/ni/Index.html" onclick="showPage('home')">Home</a></li>
+            <li><a href="http://127.0.0.1:5501/FWA/crypto-app/dashboard.html" onclick="showPage('Portfolio')">Portfolio</a></li>
+            <li><a href="http://127.0.0.1:5501/FWA/crypto-app/tools.html" onclick="showPage('features')">Features</a></li>
+            <li><a href="http://127.0.0.1:5501/ni/Wallet.html" onclick="showPage('wallet')">Wallet</a></li>
+            <li><a href="http://127.0.0.1:5501/range.html" onclick="showPage('range')">Range</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-login" onclick="showPage('login')">Login</button>
+        </div>
+    </nav>
+    <section id="range" class="page active">
+         <div class="container">
+        <header>
+            <h1>Bitcoin Live Tracker</h1>
+            <p id="status">Updating...</p>
+        </header>
+
+        <section class="price-card">
+            <div class="coin-info">
+                <img src="ni/btc image.png" alt="BTC Logo" width="50">
+                <h2>Bitcoin <span class="symbol">(BTC)</span></h2>
+            </div>
+            <div class="price-display">
+                <span id="btc-price">$0.00</span>
+                <span id="price-change" class="">0%</span>
+            </div>
+        </section>
+
+        <section class="converter">
+            <h3>Quick Converter</h3>
+            <input type="number" id="btc-input" placeholder="BTC Amount" value="1">
+            <span>=</span>
+            <input type="text" id="usd-output" placeholder="USD Value" readonly>
+        </section>
+    </div>
+    </section>
+
+       <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2 class="logo">BIT<span>COIN</span></h2>
+      <p>The world's first decentralized digital currency. Secure, global, and open-source.</p>
+    </div>
+    <div id="about">
+    <a href="http://127.0.0.1:5501/ni/About.html" onclick="showPage('about')">About</a>
+
+   </div>
+
+    <div class="footer-links">
+      <div class="link-group">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#">Whitepaper</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Open Source</a></li>
+        </ul>
+      </div>
+      <div class="link-group">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="mailto:nishanthsampath3007@gmail.com">Email</a></li>
+          <li><a href="https://github.com/dashboard">GitHub</a></li>
+          <li><a href="https://web.telegram.org/k/">Telegram</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Bitcoin Project. Released under the MIT license.</p>
+  </div>
+</footer>
+
+
+    <script src="range.js"></script>
+</body>
+</html>

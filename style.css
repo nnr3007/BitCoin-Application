@@ -1,0 +1,193 @@
+:root {
+    --primary: #f7931a; /* Bitcoin Orange */
+    --bg: #0b0e11;
+    --card-bg: #1e2329;
+    --text: #ffffff;
+    --text-dim: #848e9c;
+}
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    overflow-x: hidden;
+    height: 200px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(0,0,0,0.8);
+    position: sticky;
+    top: 0;
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: var(--text); transition: 0.3s; }
+.nav-links a:hover { color: var(--primary); }
+
+/* Page Logic */
+.page {
+    display: none;
+    padding: 100px 10%;
+    min-height: 80vh;
+    animation: fadeIn 0.5s ease;
+}
+
+.page.active { display: block; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Section */
+.hero { text-align: center; margin-top: 50px; }
+.hero h1 { font-size: 3.5rem; }
+.highlight { color: var(--primary); }
+
+/* Cards & Forms */
+.card, .form-container, .balance-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+#about p{
+  line-height: 30px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #12161c;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 4px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    padding: 5px;
+}
+
+#about a { text-decoration: none; color: var(--text); transition: 0.3s; font-weight: 600; }
+#about a:hover { color: var(--primary); }
+
+.btn-main { background: var(--primary); color: white; padding: 15px 30px; width: 100%; margin-top: 5px; }
+.btn-main:hover { background: #e8820e; }
+
+
+
+
+
+
+
+/* footer */
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 60px 20px 20px;
+  margin-top: 180px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 250px;
+}
+
+.logo {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.logo span {
+  color: #f7931a; /* Bitcoin Orange */
+}
+
+.footer-brand p {
+  color: #a0a0a0;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+
+.link-group h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.link-group ul {
+  list-style: none;
+}
+
+.link-group ul li {
+  margin-bottom: 10px;
+}
+
+.link-group a {
+  text-decoration: none;
+  color: #a0a0a0;
+  transition: color 0.3s;
+}
+
+.link-group a:hover {
+  color: #f7931a;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

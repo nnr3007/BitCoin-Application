@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+
+      <nav>
+      <div>
+        <div>
+          <img src="bitcoin-technology-concept-with-circuit-diagram_1419-2255.avif" alt="bitcoin logo" style="width: 100px;">
+          <div class="logo">BitDash</div>
+        </div>
+      </div>
+        <ul class="nav-links">
+            <li><a href="http://127.0.0.1:5501/ni/Index.html" onclick="showPage('home')">Home</a></li>
+            <li><a href="http://127.0.0.1:5501/FWA/crypto-app/dashboard.html" onclick="showPage('Portfolio')">Portfolio</a></li>
+            <li><a href="http://127.0.0.1:5501/FWA/crypto-app/tools.html" onclick="showPage('features')">Features</a></li>
+            <li><a href="http://127.0.0.1:5501/ni/Wallet.html" onclick="showPage('wallet')">Wallet</a></li>
+            <li><a href="http://127.0.0.1:5501/range.html" onclick="showPage('range')">Range</a></li>
+        </ul>
+    </nav>
+
+
+    <section id="signup" class="page" style="display: block;"> 
+        <div class="form-container" style="height: 600px;">
+            <h2 style="padding: 10px; text-align: center;">Create Account</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="name@example.com" required >
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <div class="input-group">
+                    <label for="pancard">Pancard</label>
+                    <input type="text" id="Pancard" placeholder="Enter your Pan number" required>
+                </div>
+                <div class="input-group">
+                    <a href="http://127.0.0.1:5501/ni/terms_and_conditions.html" target="_blank" style="text-decoration: none; color: white; font-size: large; padding:5px;">terms & conditions</a>
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-top: 45px; background: var(--primary); color: white; padding: 15px 30px; width: 100%; margin-top: 5px; ">Create Account</button>
+            </form>
+        </div>
+    </section> 
+
+</body>
+</html>

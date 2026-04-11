@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitDash | Your Bitcoin Hub</title>
+    <link rel="icon" type="image/x-icon" href="images.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <nav>
+        <div>
+        <div>
+          <img src="bitcoin-technology-concept-with-circuit-diagram_1419-2255.avif" alt="bitcoin logo" style="width: 100px;">
+          <div class="logo">BitDash</div>
+        </div>
+      </div>
+        <ul class="nav-links">
+            <li><a href="http://127.0.0.1:5501/ni/Index.html" onclick="showPage('home')">Home</a></li>
+            <li><a href="http://127.0.0.1:5501/FWA/crypto-app/dashboard.html" onclick="showPage('Portfolio')">Portfolio</a></li>
+            <li><a href="http://127.0.0.1:5501/FWA/crypto-app/tools.html" onclick="showPage('features')">Features</a></li>
+            <li><a href="http://127.0.0.1:5500/ni/Wallet.html#" onclick="showPage('wallet')">Wallet</a></li>
+            <li><a href="http://127.0.0.1:5501/range.html" onclick="showPage('range')">Range</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-login" onclick="showPage('login')">Login</button>
+        </div>
+    </nav>
+
+        <section id="wallet" class="page active" style="line-height: 40px;">
+        <h2>Your Wallet</h2>
+        <div class="wallet-container">
+            <div class="balance-card">
+                <h3>Total Balance</h3>
+                <p class="btc-amount">1.248 BTC</p>
+                <p class="usd-amount">$64,230.12 USD</p>
+            </div>
+            <div class="actions">
+                <button class="btn-action" style="margin-top: 20px;">Deposit</button>
+                <button class="btn-action" style="margin-top: 20px;">Withdraw</button>
+            </div>
+        </div>
+    </section>
+
+
+
+           <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2 class="logo">BIT<span>COIN</span></h2>
+      <p>The world's first decentralized digital currency. Secure, global, and open-source.</p>
+    </div>
+
+    <div id="about">
+    <a href="http://127.0.0.1:5501/ni/About.html" onclick="showPage('about')">About</a>
+
+   </div>
+
+    <div class="footer-links">
+      <div class="link-group">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#">Whitepaper</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Open Source</a></li>
+        </ul>
+      </div>
+      <div class="link-group">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="mailto:nishanthsampath3007@gmail.com">Email</a></li>
+          <li><a href="https://github.com/dashboard">GitHub</a></li>
+          <li><a href="https://web.telegram.org/k/">Telegram</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Bitcoin Project. Released under the MIT license.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
